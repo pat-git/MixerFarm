@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "MixerFarm",
+  "description": "Farms skill points on mixer",
+  "version": "0.1",
+  "content_scripts": [ 
+    {
+      "matches": ["http://mixer.com/*","https://mixer.com/*"],
+      "run_at": "document_start",
+      "js": [ "jquery-1.11.3.min.js", "farm.js"],
+      "match_about_blank": true,
+      "all_frames": true
+    }
+  ],
+  "permissions": [
+		"activeTab",
+		"https://mixer.com/*",
+		"http://mixer.com/*",
+		"storage",
+		"unlimitedStorage"
+  ]
+}
